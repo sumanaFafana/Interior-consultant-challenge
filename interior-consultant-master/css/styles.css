@@ -1,0 +1,317 @@
+:root {
+  font-size: 0.875em;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1080px) {
+  :root {
+    font-size: 1em;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: hsla(270, 4%, 9%, 1);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+.page-container {
+  padding-inline: 0.86rem;
+}
+
+@media (min-width: 786px) {
+  .page-container {
+    padding-inline: 2.4rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .page-container {
+    padding-inline: 3.4rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .page-container {
+    padding-inline: 5.5rem;
+  }
+}
+
+::selection {
+  background-color: #fff;
+  color: hsla(270, 4%, 9%, 1);
+}
+
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover,
+a:active {
+  color: hsla(0, 0%, 51%, 1);
+}
+
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border-color: #fff;
+  align-items: center;
+  margin-top: 1.4rem;
+}
+
+.company-logo {
+  font-family: "Crimson Pro", sans-serif;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 0.5rem 0.6rem;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #fff;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #fff;
+}
+
+.is-open .hamburger {
+  position: fixed;
+  right: 1.2rem;
+}
+
+.mobile-nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: hsla(270, 4%, 9%, 1);
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 18.4rem 10rem;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: 2.3rem;
+}
+
+.mobile-nav :first-child,
+footer a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.6rem;
+  text-decoration-thickness: 4px;
+}
+
+@media (min-width: 645px) {
+  .hamburger {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.tabToDestop-nav {
+  display: none;
+}
+
+@media (min-width: 645px) {
+  .tabToDestop-nav {
+    display: flex;
+    gap: 2.9rem;
+  }
+
+  .tabToDestop-nav :first-child {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.6rem;
+    text-decoration-thickness: 2px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .tabToDestop-nav {
+    gap: 5.7rem;
+  }
+}
+
+/* Main */
+.main {
+  margin-top: 2.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 786px) {
+  .main {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 9rem;
+  }
+}
+
+.page-title {
+  margin-top: 0;
+  font-family: "Lora", san-serif;
+  font-weight: 500;
+  font-size: 2.8rem;
+}
+
+@media (min-width: 645px) {
+  .page-title {
+    font-size: 2.6rem;
+  }
+}
+
+.company-description {
+  margin-top: 1.8rem;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  width: 76%;
+}
+
+@media (min-width: 645px) {
+  .company-description {
+    font-size: 1.14rem;
+  }
+}
+
+@media (min-width: 786px) {
+  .company-description {
+    width: 90%;
+  }
+}
+
+.read-more {
+  display: inline-flex;
+  margin-top: 1.8rem;
+  font-weight: 700;
+  align-items: center;
+}
+
+.read-more i {
+  margin-left: 0.9rem;
+}
+
+.column-2 {
+  margin-top: 2.6rem;
+  position: relative;
+}
+
+@media (min-width: 786px) {
+  .column-2 {
+    margin-top: 0;
+  }
+}
+
+.display img {
+  width: 100%;
+}
+
+.displayBuilder {
+  background: hsla(270, 4%, 9%, 1);
+  padding-inline: 1.6rem;
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  left: 5%;
+  transform: translateY(60%);
+}
+
+@media screen and (min-width: 645px) {
+  .displayBuilder {
+    width: 60%;
+    left: auto;
+    right: 5%;
+  }
+}
+
+.displayBuilder > div {
+  display: flex;
+  align-items: start;
+  margin-top: 0.9rem;
+}
+
+.displayBuilder img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.designer-info {
+  margin-left: 1rem;
+}
+
+.designer-name {
+  margin-top: 0;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+@media (min-width: 645px) {
+  .designer-name {
+    font-size: 1rem;
+  }
+}
+
+.designer-job {
+  font-size: 0.7rem;
+  margin-top: 0;
+  color: hsla(0, 0%, 51%, 1);
+}
+
+@media (min-width: 645px) {
+  .designer-job {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+}
+
+.madeDate {
+  font-family: "Lora", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  margin-top: 14rem;
+  margin-bottom: 10rem;
+}
+
+@media (min-width: 786px) {
+  footer {
+    margin-top: 13rem;
+  }
+}
